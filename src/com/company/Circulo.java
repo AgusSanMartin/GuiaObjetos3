@@ -18,8 +18,13 @@ public class Circulo {
 
     public String getColour() { return colour; }
 
-    public void calculateArea(){
+    public double calculateArea(){
         this.area = Math.PI * getRadius() * getRadius();
-        System.out.printf("\nThe area is: %.2f", this.area);
+        return this.area;
+    }
+
+    @Override
+    public String toString() {
+        return "Circulo: radius " + getRadius() + " color " + getColour();
     }
 }
